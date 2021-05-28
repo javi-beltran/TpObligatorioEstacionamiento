@@ -6,10 +6,10 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Jumbotron Template · Bootstrap v4.6</title>
+    <title>Cocheras Javi S.A.</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/jumbotron/">
-
+      <link rel="icon" type="image/png" href="https://img-premium.flaticon.com/png/512/75/75905.png?token=exp=1622237150~hmac=ae91707b53b31e03abf07a42bacb1513" sizes="64x64">
     
 
     <!-- Bootstrap core CSS -->
