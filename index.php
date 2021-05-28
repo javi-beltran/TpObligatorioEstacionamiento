@@ -8,8 +8,9 @@
     <meta name="generator" content="Hugo 0.80.0">
     <title>Cocheras Javi S.A.</title>
 
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/jumbotron/">
     
-    <link rel="icon" type="image/vnd.microsoft.icon" href="favivon.ico" sizes="48x48">
+    <link rel="icon" type="favivon.ico" href="favivon.ico" sizes=" 48x48">
 
     <!-- Bootstrap core CSS -->
 <!--<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">-->
