@@ -8,13 +8,12 @@
     <meta name="generator" content="Hugo 0.80.0">
     <title>Cocheras Javi S.A.</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/jumbotron/">
-      <link rel="icon" type="image/png" href="https://img-premium.flaticon.com/png/512/75/75905.png?token=exp=1622237150~hmac=ae91707b53b31e03abf07a42bacb1513" sizes="64x64">
     
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favivon.ico" sizes="48x48">
 
     <!-- Bootstrap core CSS -->
 <!--<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">-->
-<link rel="stylesheet" href="favivon.png" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
 
 
