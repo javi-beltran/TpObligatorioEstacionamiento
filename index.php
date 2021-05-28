@@ -10,8 +10,8 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/jumbotron/">
     
-    <link rel="icon" type="favivon.ico" href="image\favivon.ico" sizes=" 48x48">
-
+    
+    <link rel="icon" type="image\favicon.ico" href="image\favicon.ico" sizes="16x16"
 
 
     <!-- Bootstrap core CSS -->
