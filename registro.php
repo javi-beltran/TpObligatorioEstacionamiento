@@ -11,7 +11,6 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/sign-in/">
 
     
-
     <!-- Bootstrap core CSS -->
 <!--<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -41,19 +40,19 @@
   </head>
   <body class="text-center">
     
-<form class="form-signin" action="hacerlogin.php" method="post">
+<form class="form-signin" action="hacerregistro.php" method="post">
   <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <h1 class="h3 mb-3 font-weight-normal">Registrate</h1>
   <label for="inputEmail" class="sr-only">Email address</label>
   <input name="correo" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
   <label for="inputPassword" class="sr-only">Password</label>
   <input name="clave" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+   <label for="inputPassword" class="sr-only">Copia Password</label>
+  <input name="copiaclave" type="password" id="inputPassword" class="form-control" placeholder="Copia Password" required>
+
+  
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Registrarme</button>
   <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p>
 </form>
 
