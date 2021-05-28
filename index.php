@@ -11,7 +11,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/jumbotron/">
     
     
-    <link rel="icon" type="image\favicon.ico" href="image\favicon.ico" sizes="16x16"
+   <!-- <link rel="icon" type="favicon.ico" href="favicon.ico" sizes="16x16">-->
+    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
 
 
     <!-- Bootstrap core CSS -->
