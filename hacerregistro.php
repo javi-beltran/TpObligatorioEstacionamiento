@@ -24,7 +24,7 @@ if ($clave==$copiaclave)
 	fclose($archivos);
  }else
  {
- 	echo "Error en clave";
+ 	
  }
 
  

@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.80.0">
-    <title>Cocheras Javi S.A.</title>
+    
+    
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/jumbotron/">
     
     
    <!-- <link rel="icon" type="favicon.ico" href="favicon.ico" sizes="16x16">-->
-    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+    <!-- FAVICON - LINEAS 28-05-->
+    <!--<title>Cocheras Javi S.A.</title>-->
+    <!--<link rel="icon" type="image/png" href="favicon.png" sizes="16x16">-->
+    <!-- FAVICON-->
+
+    <?php
+      include_once"titulo.php";
+    ?>
 
 
     <!-- Bootstrap core CSS -->
@@ -45,7 +48,7 @@
   <body>
     
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Nombre de la aplicacion</a>
+  <a class="navbar-brand" href="#">Cocheras Javi S.A.</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -82,9 +85,9 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">¡Bienvenido!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <h1 class="display-3">Cocheras Javi S.A.</h1>
+      <p>Cocheras a bajo costo por el tiempo q Ud. elija.</p>
+      <p><a class="btn btn-primary btn-lg" href="estacionar.php" role="button">Ingresar veiculo &raquo;</a></p>
     </div>
   </div>
 
@@ -92,19 +95,23 @@
     <!-- Example row of columns -->
     <div class="row">
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me. Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <h2>Motos / bicicletas</h2>
+        <p>Motos / bicicletas.
+          <br>
+        10% de descuento</p>
+        <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Standing on the frontline when the bombs start to fall. Heaven is jealous of our love, angels are crying from up above. Can't replace you with a million rings. Boy, when you're with me I'll give you a taste. There’s no going back. Before you met me I was alright but things were kinda heavy. Heavy is the head that wears the crown.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <h2>Automoviles</h2>
+        <p>Compactos o familiares.
+          <br>
+        20% de descuento</p>
+        <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Playing ping pong all night long, everything's all neon and hazy. Yeah, she's so in demand. She's sweet as pie but if you break her heart. But down to earth. It's time to face the music I'm no longer your muse. I guess that I forgot I had a choice.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <h2>Camion/camionetas</h2>
+        <p>De uso comercial o recreativo.</p>
+        <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
     </div>
 
