@@ -34,20 +34,23 @@
       function abriringreso(){
         
         var altaI=document.getElementById("divIngreso");
-        var baja=document.getElementById("buttonSalida");
-        altaI.hidden=false;
-        var botonbaja=document.getElementById("buttonSalida");
-       botonbaja.hidden=true;
-        
+        var bajabotonsalida=document.getElementById("buttonSalida");
+        var baja2=document.getElementById("buttonIngreso");
+          altaI.hidden=false;
+          baja2.hidden=true;
+          bajabotonsalida.hidden=true;
+
 
     } 
     function abrirsalida(){
         
         var altaS=document.getElementById("divSalida");
         var baja=document.getElementById("buttonIngreso");
+        var desaparecer=document.getElementById("buttonSalida");
         altaS.hidden=false;
         var botonbaja=document.getElementById("buttonIngreso");
        botonbaja.hidden=true;
+       desaparecer.hidden=true;
         
 
     }
@@ -68,11 +71,27 @@
     </script>
     <!-- Custom styles for this template -->
     <link href="pricing.css" rel="stylesheet">
+    
     <?php
       include_once"titulo.php";
     ?>
+<style type="text/css">
+    .bg { 
+          /* The image used */
+          background-image: url("estacionamiento.png");
+
+          /* Full height */
+          /*/height: 100%; */
+
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+    </style>
+
   </head>
-  <body>
+  <body >
     
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <h5 class="my-0 mr-md-auto font-weight-normal">Cocheras Javi S.A.</h5>
@@ -84,34 +103,58 @@
   </nav>
   <a class="btn btn-outline-primary" href="#">Usuario</a>
 </div>
-
+<div align="center"><img src="estacionamiento.png"width="50%" height="50%"</div>
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-
+ 
 <!--MANDO POR POST LOS DATOS -->
 <!-- class="form-signin" action="hacerlogin.php" method="post" -->
+                            
+                            <form class="form-signin" action="ingresarpatente.php" method="post">
+                              
+                              <input type="button" value ="Ingreso" id="buttonIngreso" onclick="abriringreso()">
+                              
+                              <div  id="divIngreso" hidden="true">
+                            <h1 class="display-4">Ingresar Vehiculo</h1>
+                            <!--<p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>-->
+                            <input name="Ipatente" type="text"  id="txtPatente">
+                           
+                            <button  type="submit">Cargar</button>
+                            <br>
+                            <br>
+                            <br>
+                               <a href="estacionar.php" id="volverentrada" >
+                                 Volver
+                               </a>
+                            <!--<input type="button" value="Cargar">-->
+                            </div>
 
-  <form class="form-signin" action="ingresarpatente.php" method="post">
-    <input type="button" value ="Ingreso" id="buttonIngreso" onclick="abriringreso()">
-    <div id="divIngreso" hidden="true">
-  <h1 class="display-4">Ingresar Vehiculo</h1>
-  <!--<p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>-->
-  <input name="Ipatente" type="text" name="txtPatente" id="txtPatente">
-  
-  <button  type="submit">Cargar</button>
-  
-  <!--<input type="button" value="Cargar">-->
-  </div>
-</form>
-  <!--Salir vehiculos-->
-   <form class="form-signin" action="salidapatente.php" method="post">
-  <input type="button" value ="Salida" id="buttonSalida" onclick="abrirsalida()">
-  <div id="divSalida" hidden="true">
-  <h1 class="display-4">Salir Vehiculo</h1>
-  <!--<p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>-->
-  <input name="Ipatente" type="text" name="txtSalir" id="txtSalir">
-  
-  <button  type="submit" >Cargar</button>
-  
+                          </form>
+                            <br>
+                            <br>
+                            <!--Salir vehiculos-->
+                             <form class="form-signin" action="salidapatente.php" method="post">
+                            <input type="button" value =" Salida " id="buttonSalida" onclick="abrirsalida()">
+                           
+                            <div id="divSalida" hidden="true">
+                            <h1 class="display-4">Salir Vehiculo</h1>
+                            <!--<p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>-->
+                            
+                            <input name="Ipatente" type="text"  id="txtSalir">
+                            
+                            <button  type="submit" >Cargar</button>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                              <?php 
+                                                    include "tablaestacionados.php"
+                              ?>
+                            <br>
+                            <br>
+                            <br>
+                            <a href="estacionar.php" id="volversalida">
+                              Volver
+                            </a>
   </div>
 
 </form>
@@ -121,10 +164,10 @@
   <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Motos/Bicicletas</h4>
+        <h4 class="my-0 font-weight-normal">Minutos</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">0.50 Bitcoins</li>
+        <h1 class="card-title pricing-card-title">$PRECIO</li>
           <small class="text-muted">/ mo</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>10 users included</li>
@@ -137,10 +180,10 @@
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Copactos/Familiares</h4>
+        <h4 class="my-0 font-weight-normal">Horas</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">2.00 Bitcoins <small class="text-muted">/ mo</small></h1>
+        <h1 class="card-title pricing-card-title">$PRECIO<small class="text-muted">/ mo</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>20 users included</li>
           <li>10 GB of storage</li>
@@ -152,10 +195,10 @@
     </div>
     <div class="card mb-4 shadow-sm">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Camiones/Camionestas</h4>
+        <h4 class="my-0 font-weight-normal">Días</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">3.00 Bitcoins <small class="text-muted">/ mo</small></h1>
+        <h1 class="card-title pricing-card-title">$PRECIO<small class="text-muted">/ mo</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>30 users included</li>
           <li>15 GB of storage</li>

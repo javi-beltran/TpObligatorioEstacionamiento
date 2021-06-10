@@ -1,0 +1,2 @@
+<CENTER><table BORDER = 1 WIDTH=100%><tr ALIGN=CENTER><th >patente</th><th >Ingreso</th></tr><tr ALIGN=CENTER><td>AAA123</td ALIGN=CENTER><td>2021-06-02 22:27:15
+</td></tr><tr ALIGN=CENTER><td>CCC123</td ALIGN=CENTER><td>2021-06-02 22:27:34</td></tr></table></CENTER>

@@ -13,9 +13,7 @@
     <!--<link rel="icon" type="image/png" href="favicon.png" sizes="16x16">-->
     <!-- FAVICON-->
 
-    <?php
-      include_once"titulo.php";
-    ?>
+    
 
 
     <!-- Bootstrap core CSS -->
@@ -44,9 +42,12 @@
     
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
+    <?php
+      include_once"titulo.php";
+    ?>
   </head>
   <body>
-    
+ </div>    
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="#">Cocheras Javi S.A.</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +55,8 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
+  
+    <!--<ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
       </li>
@@ -69,13 +71,17 @@
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Something else here</a>-->
         </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
+      </li>
+      <!--<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
     </form>
   </div>
 </nav>
@@ -86,6 +92,7 @@
   <div class="jumbotron">
     <div class="container">
       <h1 class="display-3">Cocheras Javi S.A.</h1>
+      <div align="center"><img src="1estacionar.png" width="20%">
       <p>Cocheras a bajo costo por el tiempo q Ud. elija.</p>
       <p><a class="btn btn-primary btn-lg" href="estacionar.php" role="button">Ingresar veiculo &raquo;</a></p>
     </div>
@@ -94,23 +101,19 @@
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-      <div class="col-md-4">
-        <h2>Motos / bicicletas</h2>
-        <p>Motos / bicicletas.
-          <br>
-        10% de descuento</p>
+      <div align="center"class="col-md-4">
+        <h2>Minutos</h2>
+        <h2>$PRECIO</h2>
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
-      <div class="col-md-4">
-        <h2>Automoviles</h2>
-        <p>Compactos o familiares.
-          <br>
-        20% de descuento</p>
+      <div align="center" class="col-md-4">
+        <h2>Horas</h2>
+        <h2>$PRECIO</h2>
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
-      <div class="col-md-4">
-        <h2>Camion/camionetas</h2>
-        <p>De uso comercial o recreativo.</p>
+      <div align="center"class="col-md-4">
+        <h2>Día</h2>
+        <h2>$PRECIO</h2>
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
     </div>
@@ -122,7 +125,12 @@
 </main>
 
 <footer class="container">
-  <p>&copy; Company 2017-2021</p>
+   
+    <?php
+      include_once"copyright.php";
+    ?>
+      
+  
 </footer>
 
 

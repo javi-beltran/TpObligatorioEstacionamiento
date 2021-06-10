@@ -11,7 +11,7 @@ echo $patente;*/
 	$patente = $_POST['Ipatente'];
 	if ($patente!=""){
 		$ahora1=date("Y-m-d H:i:s");
-		$renglon="\n".$patente."->".$ahora1;
+		$renglon="\n".$patente."->".$ahora1."->A";
 		guardar("estacionar.txt",$renglon);
 		echo "Patente ingresado con exito";
 		echo "<br>";

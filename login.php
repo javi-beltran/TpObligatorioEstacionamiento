@@ -6,7 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Signin Template · Bootstrap v4.6</title>
+    <?php
+      include_once"titulo.php";
+    ?>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/sign-in/">
 
@@ -38,23 +40,39 @@
     
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
+
   </head>
   <body class="text-center">
+
     
 <form class="form-signin" action="hacerlogin.php" method="post">
-  <img class="mb-4" src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/bootstrap-4.png" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-  <label for="inputEmail" class="sr-only">Email address</label>
+  <div align="text-center">
+    <h2>Cocheras Javi S.A.</h2>
+    <br>
+    <h4>Empleados</h4>
+  </div>
+
+  <br>
+  <br>
+
+  <img class="mb-4" src="login.png" width="90%">
+  <h1 class="h3 mb-3 font-weight-normal">Registrese</h1>
+  <label for="inputEmail" class="sr-only">Email</label>
   <input name="correo" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
   <label for="inputPassword" class="sr-only">Password</label>
   <input name="clave" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
   <div class="checkbox mb-3">
     <label>
-      <input type="checkbox" value="remember-me"> Remember me
+      <input type="checkbox" value="remember-me"> Recuerdeme
     </label>
   </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+  <p class="mt-5 mb-3 text-muted">
+    <?php
+      include_once"copyright.php";
+    ?>
+      
+  </p>
 </form>
 
 

@@ -1,5 +1,5 @@
 	<title>Cocheras Javi S.A.</title>
-    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favivon.png" sizes="16x16">
 
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
