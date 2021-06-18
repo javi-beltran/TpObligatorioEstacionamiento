@@ -25,7 +25,8 @@ echo $patente;*/
 	//$GNC = $_POST['GNC'];
 	//$GNC = $_POST['sGNC'];
 	$patente = $_POST['Ipatente'];
-	$combo = $_POST['Icombo'];
+	//$combo = $_POST['Icombo'];
+	$rad = $_POST['rad'];
 	
 	//$GNC = $_POST['GNC'];
 	
@@ -34,15 +35,14 @@ echo $patente;*/
 	//$NOGNC = $_POST['NO_GNC'];
 
 	
-	var_dump($_POST);
+	//var_dump($_POST);
     
-	/*foreach ($combo as $comboselec) {
-		# code...
-	}*/
+	
 	//echo $combo . "<br>";
 	if ($patente!=""){
 		$ahora1=date("Y-m-d H:i:s");
-		$renglon="\n".$patente."->".$ahora1."->".$combo."->".$GNC."->A";
+		//$renglon="\n".$patente."->".$ahora1."->".$combo."->".$GNC."->A";
+		$renglon="\n".$patente."->".$ahora1."->".$rad."->".$GNC."->A";
 		guardar("estacionar.txt",$renglon);
 		echo "Patente ingresado con exito";
 		echo "<br>";

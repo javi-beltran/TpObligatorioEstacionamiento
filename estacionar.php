@@ -121,11 +121,20 @@
                             <!--<input name="Ipatente" type="text"  id="txtPatente">-->
                             <input name="Ipatente" type="text"  >
 
-                            <select name="Icombo"id="IcomboID">
+                            <!--<select name="Icombo"id="IcomboID">
                               <option value="Alta">Alta</option>
                               <option value="Media">Media</option>
                               <option value="Baja">Baja</option>
-                            </select>  
+                            </select> -->
+                            <br>
+                              <input type="radio" name="rad" value="RAlta">
+                              <label for="male">Alta</label><br>
+                              <input type="radio" name="rad" value="RMedia">
+                              <label for="female">Media</label><br>
+                              <input type="radio" name="rad" value="RBaja">
+                              <label for="other">Baja</label> 
+
+
                             <br>
                             <br>
                              <input type="checkbox"  name="GNC" id="GNC" value="GNC">
