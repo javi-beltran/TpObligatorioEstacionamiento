@@ -11,13 +11,30 @@ echo $patente;*/
 	include_once ("funciones.php");
 	include_once "estacionamientosalidas.php";
 	include_once  "estacionamiento.php";
-	
-	
+	//$GNC = "SIN GNC";
+	/*if ($GNC != $_POST['GNC']) {
+	$GNC = 	 "SIN GNC";
+	}*/
+
+	if (isset($_POST['GNC'])) {
+	$GNC = "GNC";
+	}else
+	{
+		$GNC = "sin GNC";
+	}
+	//$GNC = $_POST['GNC'];
+	//$GNC = $_POST['sGNC'];
 	$patente = $_POST['Ipatente'];
 	$combo = $_POST['Icombo'];
+	
+	//$GNC = $_POST['GNC'];
+	
+
+		
+	//$NOGNC = $_POST['NO_GNC'];
 
 	
-	//var_dump($_POST);
+	var_dump($_POST);
     
 	/*foreach ($combo as $comboselec) {
 		# code...
@@ -25,7 +42,7 @@ echo $patente;*/
 	//echo $combo . "<br>";
 	if ($patente!=""){
 		$ahora1=date("Y-m-d H:i:s");
-		$renglon="\n".$patente."->".$ahora1."->".$combo."->A";
+		$renglon="\n".$patente."->".$ahora1."->".$combo."->".$GNC."->A";
 		guardar("estacionar.txt",$renglon);
 		echo "Patente ingresado con exito";
 		echo "<br>";

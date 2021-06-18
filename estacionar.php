@@ -56,9 +56,9 @@
         var botonbaja=document.getElementById("buttonIngreso");
        botonbaja.hidden=true;
        desaparecer.hidden=true;
-        
-
     }
+
+
 
 
     
@@ -115,7 +115,7 @@
                               
                               <input type="button" value ="Ingreso" id="buttonIngreso" onclick="abriringreso()">
                               
-                              <div  id="divIngreso" hidden="true">
+                              <div  id="divIngreso" hidden="false">
                             <h1 class="display-4">Ingresar Vehiculo</h1>
                             <!--<p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>-->
                             <!--<input name="Ipatente" type="text"  id="txtPatente">-->
@@ -125,8 +125,17 @@
                               <option value="Alta">Alta</option>
                               <option value="Media">Media</option>
                               <option value="Baja">Baja</option>
-                            </select>                            
+                            </select>  
+                            <br>
+                            <br>
+                             <input type="checkbox"  name="GNC" id="GNC" value="GNC">
+                            <label for="vehicle1"> GNC</label><br>
+                            
+                            <br>
+                            <br>
+
                             <button  type="submit">Cargar</button>
+                            
                             <br>
                             <br>
                             <br>
@@ -142,9 +151,10 @@
                             <!--Salir vehiculos-->
                              <form class="form-signin" action="salidapatente.php" method="post">
                             <!--<input type="button" value =" Salida " id="buttonSalida" onclick="abrirsalida()">-->
-                            
+                          
+ 
                            <input type="button" value =" Salida " id="buttonSalida" onclick="abrirsalida()" >
-                           <div id="divSalida" hidden="true">
+                           <div id="divSalida" hidden="false">
                             <h1 class="display-4">Salir Vehiculo</h1>
                             <!--<p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>-->
 
