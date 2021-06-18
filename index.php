@@ -103,17 +103,17 @@
     <div class="row">
       <div align="center"class="col-md-4">
         <h2>Minutos</h2>
-        <h2>$PRECIO</h2>
+        <h2>$5</h2>
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div align="center" class="col-md-4">
         <h2>Horas</h2>
-        <h2>$PRECIO</h2>
+        <h2>$3</h2>
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div align="center"class="col-md-4">
         <h2>Día</h2>
-        <h2>$PRECIO</h2>
+        <h2>$2</h2>
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
     </div>

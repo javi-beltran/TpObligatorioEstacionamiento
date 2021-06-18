@@ -7,13 +7,18 @@ class estacionamientosalidas
 		echo "hola";
 	}
 
-	public static function leer(){
+	public static function leercobrados(){
 		//$listaDeAutosLeida=array();
 		$listaDeAutosLeida=LeerArchivo("cobrados.txt","->");
 		return $listaDeAutosLeida;
 	}
+	public static function leerestacionados(){
+		//$listaDeAutosLeida=array();
+		$listaDeAutosLeida=LeerArchivo("estacionar.txt","->");
+		return $listaDeAutosLeida;
+	}
 	public static function CrearTablaEstacionados2() {
-		$listado=estacionamientosalidas::leer();
+		$listado=estacionamientosalidas::leercobrados();
 		$tablaHTML="<CENTER>";
 		$tablaHTML="<table border=1>";
 		$tablaHTML.="<th>";
@@ -54,5 +59,29 @@ class estacionamientosalidas
 		}
 		fclose($archivo);
 	}
+	 /*function CreartablaEstacionados() {
+		$listado=estacionamientosalidas::leerestacionados();
+		$tablaHTML="<CENTER>";
+		$tablaHTML.="<table BORDER = 1 WIDTH=100%>";
+		$tablaHTML.="<tr ALIGN=CENTER>";
+		$tablaHTML.="<th >";
+		$tablaHTML.="patente";
+		$tablaHTML.="</th>";
+		$tablaHTML.="<th >";
+		$tablaHTML.="Ingreso";
+		$tablaHTML.="</th>";
+		$tablaHTML.="</tr>";
+		foreach($listado as $auto)
+		{
+			$tablaHTML.="<tr ALIGN=CENTER><td>$auto[0]</td ALIGN=CENTER><td>$auto[1]</td></tr>";
+		}
 
+		$tablaHTML.="</table>";
+		$tablaHTML.="</CENTER>";
+		$archivo=fopen("tablaestacionados.php","w");
+		fwrite($archivo,$tablaHTML);
+		fclose($archivo);
+	
+
+	}*/
 }

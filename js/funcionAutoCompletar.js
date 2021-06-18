@@ -1,0 +1,26 @@
+$(function(){
+             
+			  var patentes = [ 
+
+			    	
+			    "HHH555","BBB999","gdfg222","gdfgxxxx","gdfgvvv","SSS555","GGG997",	
+
+
+
+			  ];
+
+
+			  
+			  // setup autocomplete function pulling from patentes[] array
+			  $('#autocomplete').autocomplete({
+			    lookup: patentes,
+			    onSelect: function (suggestion) {
+			      var thehtml = '<strong>patente: </strong> ' + suggestion.value + ' <br> <strong>ingreso: </strong> ' + suggestion.data;
+			      $('#outputcontent').html(thehtml);
+			         $('#botonIngreso').css('display','none');
+      						console.log('aca llego');
+			    }
+			  });
+			  
+
+			});

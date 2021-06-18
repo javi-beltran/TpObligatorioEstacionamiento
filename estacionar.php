@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
+ 
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+  <script type="text/javascript" src="js/funcionAutoCompletar.js"></script>
    
     <!--<title>Precios</title>-->
 
@@ -29,7 +33,8 @@
       }
     </style>
 
-    <script type="text/javascript">
+    
+  <script type="text/javascript">
     var cuenta=0;
       function abriringreso(){
         
@@ -45,7 +50,7 @@
     function abrirsalida(){
         
         var altaS=document.getElementById("divSalida");
-        var baja=document.getElementById("buttonIngreso");
+        var baja=document.getElementById("buttonSalida");
         var desaparecer=document.getElementById("buttonSalida");
         altaS.hidden=false;
         var botonbaja=document.getElementById("buttonIngreso");
@@ -54,17 +59,6 @@
         
 
     }
-    /* function reset(){
-        
-        var altaI=document.getElementById("divIngreso");
-        var altaS=document.getElementById("divSalida");
-        var botonbajaS=document.getElementById("buttonSalida");
-       botonbaja.hidden=false;
-        var botonbajaI=document.getElementById("buttonIngreso");
-       botonbaja.hidden=false;
-        
-
-    }*/
 
 
     
@@ -90,8 +84,16 @@
         }
     </style>
 
+
+
+ 
+
   </head>
   <body >
+    <?php
+    include_once "funciones.php";
+    CtrlShiftF5();
+    ?>
     
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <h5 class="my-0 mr-md-auto font-weight-normal">Cocheras Javi S.A.</h5>
@@ -116,8 +118,14 @@
                               <div  id="divIngreso" hidden="true">
                             <h1 class="display-4">Ingresar Vehiculo</h1>
                             <!--<p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>-->
-                            <input name="Ipatente" type="text"  id="txtPatente">
-                           
+                            <!--<input name="Ipatente" type="text"  id="txtPatente">-->
+                            <input name="Ipatente" type="text"  >
+
+                            <select name="Icombo"id="IcomboID">
+                              <option value="Alta">Alta</option>
+                              <option value="Media">Media</option>
+                              <option value="Baja">Baja</option>
+                            </select>                            
                             <button  type="submit">Cargar</button>
                             <br>
                             <br>
@@ -133,13 +141,14 @@
                             <br>
                             <!--Salir vehiculos-->
                              <form class="form-signin" action="salidapatente.php" method="post">
-                            <input type="button" value =" Salida " id="buttonSalida" onclick="abrirsalida()">
-                           
-                            <div id="divSalida" hidden="true">
+                            <!--<input type="button" value =" Salida " id="buttonSalida" onclick="abrirsalida()">-->
+                            
+                           <input type="button" value =" Salida " id="buttonSalida" onclick="abrirsalida()" >
+                           <div id="divSalida" hidden="true">
                             <h1 class="display-4">Salir Vehiculo</h1>
                             <!--<p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>-->
-                            
-                            <input name="Ipatente" type="text"  id="txtSalir">
+
+                            <input name="Ipatente" type="text"  id="autocomplete">
                             
                             <button  type="submit" >Cargar</button>
                             <br>
@@ -147,7 +156,9 @@
                             <br>
                             <br>
                               <?php 
-                                                    include "tablaestacionados.php"
+                                                     include "tablaestacionados.php";
+                                                    //include_once "salidapatente.php";
+                                                    
                               ?>
                             <br>
                             <br>
@@ -155,7 +166,7 @@
                             <a href="estacionar.php" id="volversalida">
                               Volver
                             </a>
-  </div>
+                            </div>
 
 </form>
 </div>
@@ -167,13 +178,13 @@
         <h4 class="my-0 font-weight-normal">Minutos</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$PRECIO</li>
-          <small class="text-muted">/ mo</small></h1>
+        <h1 class="card-title pricing-card-title">$5</li>
+          <!--<small class="text-muted">/ mo</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>10 users included</li>
           <li>2 GB of storage</li>
           <li>Email support</li>
-          <li>Help center access</li>
+          <li>Help center access</li>-->
         </ul>
         <!--<button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>-->
       </div>
@@ -183,12 +194,13 @@
         <h4 class="my-0 font-weight-normal">Horas</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$PRECIO<small class="text-muted">/ mo</small></h1>
+        <h1 class="card-title pricing-card-title">$3</li>
+          <!--<small class="text-muted">/ mo</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>20 users included</li>
           <li>10 GB of storage</li>
           <li>Priority email support</li>
-          <li>Help center access</li>
+          <li>Help center access</li>-->
         </ul>
         <!--<button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>-->
       </div>
@@ -198,22 +210,23 @@
         <h4 class="my-0 font-weight-normal">Días</h4>
       </div>
       <div class="card-body">
-        <h1 class="card-title pricing-card-title">$PRECIO<small class="text-muted">/ mo</small></h1>
+        <h1 class="card-title pricing-card-title">$2</li>
+          <!--<small class="text-muted">/ mo</small></h1>
         <ul class="list-unstyled mt-3 mb-4">
           <li>30 users included</li>
           <li>15 GB of storage</li>
           <li>Phone and email support</li>
-          <li>Help center access</li>
+          <li>Help center access</li>-->
         </ul>
         <!--<button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>-->
       </div>
    
   </div>
 
-  <!--<footer class="pt-4 my-md-5 pt-md-5 border-top">
-    <div class="row">
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <!--<div align="center" class="row">
       <div class="col-12 col-md">
-        <img class="mb-2" src="../assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+        <img class="mb-2" src="favivon.png" alt="" width="24" height="24">
         <small class="d-block mb-3 text-muted">&copy; 2017-2021</small>
       </div>
       <div class="col-6 col-md">
@@ -245,8 +258,8 @@
           <li><a class="text-muted" href="#">Terms</a></li>
         </ul>
       </div>
-    </div>
-  </footer>-->
+    </div>-->
+  </footer>
   <?php
     include_once "p_body.php";
   ?>
