@@ -47,9 +47,12 @@ foreach ($arrayspatente as $datos) {
 		
 		$ingresado="Si";
 		$fechaEntrada=$datos[1];
-		$combo = $datos[2];
+		$rad = $datos[2];
+		$GNC=$datos[3];
+		$moto=$datos[4];
 		$fechaSalida=date("Y-m-d H:i:s");
-		$precio=calcularTotales($fechaEntrada,$fechaSalida);
+		$precio=calcularTotales($fechaEntrada,$fechaSalida,$rad,$moto);
+		//function calcularTotales($variable,$variable2,$gama,$moto)
 		
 		
 		//guardar("cobrados.txt",$datos[0]."->".$datos[1])."->".$fechaSalida."->".$precio."\n";//guardar los cobrados
@@ -58,12 +61,15 @@ foreach ($arrayspatente as $datos) {
 					
 		
 		
+		//echo($fechaEntrada);
+		guardarTICKECT($patente,$fechaEntrada,$fechaSalida,$precio,$rad,$moto);
+		mostrarTicket($patente,$fechaEntrada,$fechaSalida,$precio,$rad,$moto);
 		
-		guardarTICKECT($patente,$fechaEntrada,$fechaSalida,$precio);
-		mostrarTicket($patente,$fechaEntrada,$fechaSalida,$precio);
-		borrarEstacionados($patente, $fechaEntrada,$combo);
+		borrarEstacionados($patente,$fechaEntrada,$rad,$GNC,$moto);
+		exportarApdf();
 		estacionamiento::CreartablaEstacionados();
-		echo "<br>";
+		//estacionamiento::CreartablaEstacionados();
+		//echo "<br>";
 		include_once "tablaTICKET.php";		
 		break;
 	}else
@@ -77,9 +83,10 @@ foreach ($arrayspatente as $datos) {
    		   			<img src="404PATENTE.png">
 	
 			<?php*/
-			echo '<img src="404PATENTE.png">';			
+		/*	echo '<img src="404PATENTE.png">';			
 			echo "<br>";
 			die();
+		*/	
 	}
 }
 

@@ -1,9 +1,9 @@
 <?php
 //$separador="->";
-	function LeerArchivo($NomArchivo,$separador) {
+	function LeerArchivo($ELTXT,$separador) {
 
 		$matrizDeRetorno=array();
-		$archivo=fopen($NomArchivo,"r");
+		$archivo=fopen($ELTXT,"r");
 		while (!feof($archivo)) {
 			$renglon=fgets($archivo);
 			$registroActual=explode($separador, $renglon);

@@ -17,16 +17,29 @@ echo $patente;*/
 	}*/
 
 	if (isset($_POST['GNC'])) {
-	$GNC = "GNC";
+		$GNC = "GNC";
 	}else
 	{
 		$GNC = "sin GNC";
+	}
+
+	if (isset($_POST['MOTO'])) {
+		$moto = "MOTO";
+	}else
+	{
+		$moto = "sin MOTO";
+	}
+	//var_dump($_POST);
+	if (($GNC == "GNC") && ($moto == "MOTO")) {
+		echo "Error";
+		die();
 	}
 	//$GNC = $_POST['GNC'];
 	//$GNC = $_POST['sGNC'];
 	$patente = $_POST['Ipatente'];
 	//$combo = $_POST['Icombo'];
 	$rad = $_POST['rad'];
+	//$moto = $_POST['MOTO'];
 	
 	//$GNC = $_POST['GNC'];
 	
@@ -35,14 +48,11 @@ echo $patente;*/
 	//$NOGNC = $_POST['NO_GNC'];
 
 	
-	//var_dump($_POST);
-    
 	
-	//echo $combo . "<br>";
 	if ($patente!=""){
 		$ahora1=date("Y-m-d H:i:s");
 		//$renglon="\n".$patente."->".$ahora1."->".$combo."->".$GNC."->A";
-		$renglon="\n".$patente."->".$ahora1."->".$rad."->".$GNC."->A";
+		$renglon="\n".$patente."->".$ahora1."->".$rad."->".$GNC."->".$moto."->A";
 		guardar("estacionar.txt",$renglon);
 		echo "Patente ingresado con exito";
 		echo "<br>";

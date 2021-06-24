@@ -127,7 +127,7 @@
                               <option value="Baja">Baja</option>
                             </select> -->
                             <br>
-                              <input type="radio" name="rad" value="RAlta">
+                              <input type="radio" name="rad" value="RAlta" required="">
                               <label for="male">Alta</label><br>
                               <input type="radio" name="rad" value="RMedia">
                               <label for="female">Media</label><br>
@@ -142,6 +142,13 @@
                             
                             <br>
                             <br>
+
+                             <input type="checkbox"  name="MOTO" id="GNC" value="MOTO">
+                            <label for="vehicle1"> Moto </label><br>
+                            
+                            <br>
+                            <br>
+                            
 
                             <button  type="submit">Cargar</button>
                             
@@ -186,7 +193,18 @@
                               Volver
                             </a>
                             </div>
+                           <div>
+                              
+                            </div>
 
+</form>
+<form action="subirimagen.php" method="POST" enctype="multipart/form-data">
+  
+    <label>Imgrese una imagen</label>
+                                <br>
+                                <input type="file" name="imagen">
+                                <br>
+                                <input type="submit" value="Enviar la imagen">
 </form>
 </div>
 

@@ -1,5 +1,5 @@
 <?php
-
+	include_once "funcionleer.php";
 	function DiferenciaDeFechas($fecha1 , $fecha2 , $formato = '%i' ) 
 	{
 		//AAAA-MM-DD
@@ -58,7 +58,7 @@
 	}*/
 	
 
-	function calcularTotales($variable,$variable2)
+	function calcularTotales($variable,$variable2,$gama,$moto)
 	{
 		$minutos= DiferenciaDeFechas($variable,$variable2,"%i");
 		$horas= DiferenciaDeFechas($variable,$variable2,"%h");
@@ -74,7 +74,7 @@
 				//sacar calculo horario
 
 		if ($minutos < 40){//hasta cobro x minutos
-	$monto=5.45;
+	$monto=5;
 	}else
 	{
 		if ($minutos > 40 && $minutos <479 ){ // cobro x horas
@@ -93,7 +93,16 @@
 	$minutos=1;
 	}
 	$total=$minutos*$monto;
-	return round($total); //Redondea el precio round($total,1) .?
+	if ($gama=="RAlta") {
+		$total=$total*1.20;
+		//$total=33333;
+	}else
+	{
+		if ($gama=="RMedia") {
+			$total=$total*1.10;
+	}
+	}
+	return round($total,); //Redondea el precio round($total,1) .?
 	}
 
 	function mostrarTicket($nropantente,$fechaE,$fechaS,$ptotal)
@@ -247,10 +256,11 @@
 		fclose($fichero);
 	}
 
-	function borrarEstacionados($patente, $fechaEntrada,$combobox)
+	//function borrarEstacionados($patente, $fechaEntrada,$combobox)
+	function borrarEstacionados($patente,$fechaEntrada,$rad,$gnc,$moto)
     {
 //        $renglon="\n".$patente."->".$fechaEntrada."->A";
-    	$renglon="\n".$patente."->".$fechaEntrada."->".$combobox."->A";
+    	$renglon="\n".$patente."->".$fechaEntrada."->".$rad."->".$gnc."->".$moto."->A";
         $arrayspatente = file_get_contents("estacionar.txt");
         $arrayspatente = str_replace($renglon, '', $arrayspatente);
         file_put_contents("estacionar.txt", $arrayspatente);
@@ -258,9 +268,15 @@
 
     function CtrlShiftF5()
     {
-    	header('Cache-Control: no-cache, no-store, max-age=0, must-revalidate');
-		//header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
-		header('Pragma: no-cache');
-		//header( 'Location: TpObligatorioEstacionamiento/estacionar.php' );
+    	header("Cache-Control: no-cache, must-revalidate");
+		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+		//header("Content-Type: application/xml; charset=utf-8");
     }
-?>
+
+    function exportarApdf()
+    {
+
+    }
+
+
+?>		

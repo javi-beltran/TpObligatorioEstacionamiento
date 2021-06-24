@@ -1,5 +1,7 @@
 
 <?php 
+
+include_once"funciones.php";
 /*var_dump($_GET);
 
 echo "<br>";
@@ -9,6 +11,8 @@ if (isset($_POST['correo']))
 {
 	$mail=$_POST['correo'];
 	$clave=$_POST['clave'];
+	setcookie("Usuario",$mail);
+	//echo "setcookie($mail)";
 }else
 {
 	die();
@@ -19,14 +23,14 @@ $clave=$_POST['clave'];*/
 $ListaDeUsuarios= array();
 
 
-
-
+	
+/*
 $archivo=fopen("usuarios1.txt", "r");
 while (!feof($archivo)) {
 	//echo "Reglon: ".fgets($archivo)."<br>";
 	//fgetc(handle) ES POR CATACTER
 	$Reglon=fgets($archivo);
-	$datosDeUnUsuario=explode("=>", $Reglon);
+	$datosDeUnUsuario=explode("->", $Reglon);
 	if (isset($datosDeUnUsuario[1]))	//[0]!="") 
 	{
 		$ListaDeUsuarios[]=$datosDeUnUsuario;
@@ -40,25 +44,42 @@ while (!feof($archivo)) {
 		 	echo "Bienvenido";
 		}
 	}*/
-}
-		fclose($archivo);
+//}
+//		fclose($archivo);
 	//var_dump($ListaDeUsuarios);
-
+$arraysLOGIN=Leerarchivo("usuarios1.txt","->");
 		$ingreso="No ingreso";
-		foreach ($ListaDeUsuarios as $datos) 
+		foreach ($arraysLOGIN as $datos) 
 		{
-			if ($datos[0]==$mail) 
+			echo $datos[0];
+			echo"<BR>";
+			//echo "$mail";
+			echo"<BR>";
+			/*if ($datos[0]==$mail) 
 		{
-		if ($datos[1]==$clave) 
+			 	echo "mail bien";
+			if ($datos[1]==$clave) 
+			{
+			 	echo "Bienvenido";
+			 	$ingreso="Ingreso";
+			 	break;
+			}
+		}*/
+			if (($datos[0]==$mail)&&($datos[1]==$clave))
+			{
+				echo "Bienvenido";
+				 	$ingreso="Ingreso";
+				 	break;
+			}
+			else
 		{
-		 	echo "Bienvenido";
-		 	$ingreso="Ingreso";
-		 	break;
+			if ($ingreso=="No ingreso") {
+			 	echo "Datos erroneos";
+			 	//break;
+			}
 		}
 		}
-		
-		}
-		if ($ingreso=="No ingreso") {
-		 	echo "Datos erroneos";
-		}
+		//$renglon="\n".$mail."->".$clave."->A";
+		//guardar("usuarios1.txt",$renglon);
+
  ?>
